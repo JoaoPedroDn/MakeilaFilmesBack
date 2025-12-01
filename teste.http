@@ -1,0 +1,90 @@
+########################################################
+# 1) LISTAR TODOS OS PRODUTOS
+########################################################
+GET http://localhost:8080/api/produtos
+
+###
+
+########################################################
+# 2) BUSCAR PRODUTO PELO ID
+########################################################
+GET http://localhost:8080/api/produtos/1
+
+###
+
+########################################################
+# 3) CRIAR UM CLIENTE
+########################################################
+POST http://localhost:8080/clientes
+Content-Type: application/json
+
+{
+  "nome": "Hevellyn Castro",
+  "email": "hevellyn@teste.com",
+  "telefone": "99999-1111"
+}
+
+###
+
+########################################################
+# 4) LISTAR CLIENTES
+########################################################
+GET http://localhost:8080/clientes
+
+###
+
+########################################################
+# 5) CRIAR UM PEDIDO PARA O CLIENTE
+########################################################
+POST http://localhost:8080/api/pedidos
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nome": "Hevellyn Castro",
+  "email": "hevellyn@teste.com",
+  "telefone": "99999-1111"
+}
+
+###
+
+########################################################
+# 6) ADICIONAR UM FILME AO PEDIDO
+########################################################
+POST http://localhost:8080/api/pedidos/1/add
+Content-Type: application/json
+
+{
+  "id": "1"
+}
+
+########################################################
+# 7) LISTAR PEDIDO POR ID (VERIFICAR TOTAL)
+########################################################
+GET http://localhost:8080/api/pedidos/1
+
+###
+
+########################################################
+# 8) PAGAR O PEDIDO VIA PIX
+########################################################
+POST http://localhost:8080/api/pedidos/1/pagar/pix
+Content-Type: application/json
+
+{
+  "chavePix": "hevellyn@pix.com"
+}
+
+###
+
+########################################################
+# 9) PAGAR VIA CARTÃO DE CRÉDITO
+########################################################
+POST http://localhost:8080/api/pedidos/1/pagar/cartao/credito?numero=123123
+
+###
+
+########################################################
+# 10) PAGAR VIA CARTÃO DE DÉBITO
+########################################################
+POST http://localhost:8080/api/pedidos/1/pagar/cartao/debito?numero=555666
