@@ -39,18 +39,75 @@ O sistema simula um **e-commerce de filmes digitais**, permitindo que usuários 
 
 ---
 
-## ⚡ Como Executar
 
-### Pré-requisitos
-- Java 17+
-- Maven
-- IDE (VS Code ou IntelliJ)
+---
 
-### Passos
+## ⚡ **Como Executar**
+
+### **📌 Pré-requisitos**
+
+* **Java 17+**
+* **Maven instalado**
+* **Git**
+* **IDE** 
+
+---
+
+## **▶️ Passos para rodar o projeto**
+
+### **1️⃣ Clonar o repositório**
+
+```bash
 git clone https://github.com/JoaoPedroDn/makeila.git
+```
+
+### **2️⃣ Entrar na pasta do projeto**
+
+```bash
 cd makeila
+```
+
+### **3️⃣ Compilar e baixar dependências**
+
+```bash
+mvn clean install
+```
+
+👉 Esse comando vai:
+
+* Baixar as dependências do Spring Boot
+* Validar o projeto
+* Gerar a pasta `target/`
+
+---
+
+### **4️⃣ Rodar o servidor**
+
+#### **Opção A – Pelo Maven**
+
+```bash
 mvn spring-boot:run
-Acesse em: http://localhost:8080
+```
+
+#### **Opção B – Pelo arquivo .jar**
+
+(gerado automaticamente na pasta `target/`)
+
+```bash
+java -jar target/makeila-0.0.1-SNAPSHOT.jar
+```
+
+---
+
+### **5️⃣ Acessar a API**
+
+Abra em qualquer navegador:
+
+👉 **[http://localhost:8080](http://localhost:8080)**
+
+---
+
+
 
 ## 📖 **Endpoints Principais**
 
