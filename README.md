@@ -1,1 +1,81 @@
-# meu-projeto
+📂 README_Back.md (Makeila - FilmeStore Backend)
+markdown
+# 🎬 Makeila - FilmeStore Backend
+
+---
+
+## 📋 Sobre o Projeto
+
+O **Makeila (FilmeStore)** é uma aplicação web desenvolvida como projeto da disciplina de **Programação Orientada a Objetos (POO)** na Universidade Federal de Goiás.  
+O sistema simula um **e-commerce de filmes digitais**, permitindo que usuários naveguem por um catálogo, criem pedidos, escolham métodos de pagamento e realizem compras de forma simulada.  
+
+---
+
+## 🚀 Funcionalidades Principais
+
+- 👤 **Usuários**: cadastro e gerenciamento de clientes.  
+- 🎬 **Catálogo de Filmes**: exibição de título, ano, gênero, preço, sinopse, elenco e trailer.  
+- 🛒 **Pedidos**: criação de pedidos, cálculo automático do total e status (pendente/pago).  
+- 💳 **Pagamentos**: suporte a Pix, Cartão de Crédito e Débito com polimorfismo.  
+
+---
+
+## 🏗️ Arquitetura e Tecnologias
+
+- **Arquitetura em Camadas**: Controller → Service → Repository → Model  
+- **Tecnologias**: Java 17, Spring Boot, Maven, UML, GitHub  
+
+---
+
+## 📂 Estrutura de Classes
+
+- **Produto** → Filme no catálogo  
+- **Cliente** → Usuário registrado  
+- **ItemPedido** → Filme dentro de um pedido  
+- **Pedido** → Conjunto de itens e informações da compra  
+- **IPagamento** → Interface para métodos de pagamento  
+- **PagamentoPix / Cartão Crédito / Cartão Débito**  
+- **Enums** → `StatusPagamento`, `StatusPedido`  
+
+---
+
+## ⚡ Como Executar
+
+### Pré-requisitos
+- Java 17+
+- Maven
+- IDE (VS Code ou IntelliJ)
+
+### Passos
+```bash
+git clone https://github.com/JoaoPedroDn/makeila.git
+cd makeila
+mvn spring-boot:run
+Acesse em: http://localhost:8080
+
+📖 Fluxo de Compra
+Cliente escolhe um filme.
+
+Sistema cria um pedido e adiciona o item.
+
+Total é calculado.
+
+Cliente escolhe forma de pagamento.
+
+Pagamento é processado e status atualizado.
+
+🤝 Contribuição
+Faça um Fork
+
+Crie uma Branch (feature/minha-feature)
+
+Commit (git commit -m ':sparkles: feature: Minha nova feature')
+
+Push (git push origin feature/minha-feature)
+
+Abra um Pull Request
+
+📝 Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE.
+
+Desenvolvido por Hevellyn Karinne Ribeiro Castro, João Pedro Dourado do Nascimento, Julia Rocha Celestino 🎓
