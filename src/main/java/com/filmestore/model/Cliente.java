@@ -1,33 +1,23 @@
 package com.filmestore.model;
 
-/**
- * Representa um cliente que faz pedidos na loja.
- * Aqui armazenamos apenas dados básicos — não existe banco,
- * tudo fica guardado em listas em memória.
- */
+
 public class Cliente {
 
-    // Identificador único do cliente. Gerado manualmente no controller.
+
     private long id;
 
-    // Nome do cliente
+
     private String nome;
 
-    // Email do cliente
     private String email;
 
-    // Telefone do cliente
     private String telefone;
 
-    // senha do cliente
     private String senha;
 
     public Cliente() {}
 
-    /**
-     * Construtor completo.
-     * Não usamos banco de dados, então tudo é criado manualmente.
-     */
+
     public Cliente(long id, String nome, String email, String telefone, String senha) {
         this.id = id;
         this.nome = nome;
@@ -35,8 +25,6 @@ public class Cliente {
         this.telefone = telefone;
         this.senha = senha;
     }
-
-    // Getters e setters simples (acessadores e modificadores)
 
     public long getId() { return id; }
 

@@ -20,7 +20,6 @@ public class PagamentoController {
         this.pedidoService = pedidoService;
     }
 
-    // 8) PAGAR VIA PIX
     @PostMapping("/{id}/pagar/pix")
     public ResponseEntity<?> pagarPix(@PathVariable int id, @RequestBody Map<String, String> body) {
         Pedido pedido = pedidoService.buscarPorId(id);
@@ -35,7 +34,6 @@ public class PagamentoController {
         return ResponseEntity.badRequest().body("Falha no pagamento PIX.");
     }
 
-    // 9) CARTÃO DE CRÉDITO
     @PostMapping("/{id}/pagar/cartao/credito")
     public ResponseEntity<?> pagarCredito(@PathVariable int id, @RequestParam String numero) {
         Pedido pedido = pedidoService.buscarPorId(id);
@@ -48,7 +46,6 @@ public class PagamentoController {
         return ResponseEntity.badRequest().body("Crédito Recusado.");
     }
 
-    // 10) CARTÃO DE DÉBITO
     @PostMapping("/{id}/pagar/cartao/debito")
     public ResponseEntity<?> pagarDebito(@PathVariable int id, @RequestParam String numero) {
         Pedido pedido = pedidoService.buscarPorId(id);

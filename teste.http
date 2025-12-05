@@ -21,7 +21,8 @@ Content-Type: application/json
 {
   "nome": "Hevellyn Castro",
   "email": "hevellyn@teste.com",
-  "telefone": "99999-1111"
+  "telefone": "99999-1111",
+  "senha" : "123"
 }
 
 ###
