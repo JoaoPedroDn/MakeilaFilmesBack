@@ -52,29 +52,70 @@ cd makeila
 mvn spring-boot:run
 Acesse em: http://localhost:8080
 
-📖 Fluxo de Compra
-Cliente escolhe um filme.
+## 📖 **Endpoints Principais**
 
-Sistema cria um pedido e adiciona o item.
+### 🎞️ **Filmes**
 
-Total é calculado.
+| Método  | Rota               | Descrição              |
+| ------- | ------------------ | ---------------------- |
+| **GET** | `/api/filmes`      | Listar todos os filmes |
+| **GET** | `/api/filmes/{id}` | Buscar filme por ID    |
 
-Cliente escolhe forma de pagamento.
+---
 
-Pagamento é processado e status atualizado.
+### 👤 **Clientes**
 
-🤝 Contribuição
-Faça um Fork
+| Método     | Rota              | Descrição         |
+| ---------- | ----------------- | ----------------- |
+| **GET**    | `/clientes`       | Listar clientes   |
+| **POST**   | `/clientes`       | Cadastrar cliente |
+| **POST**   | `/clientes/login` | Login do cliente  |
+| **PUT**    | `/clientes/{id}`  | Atualizar cliente |
+| **DELETE** | `/clientes/{id}`  | Remover cliente   |
 
-Crie uma Branch (feature/minha-feature)
+---
 
-Commit (git commit -m ':sparkles: feature: Minha nova feature')
+### 🛒 **Pedidos**
 
-Push (git push origin feature/minha-feature)
+| Método     | Rota                       | Descrição                 |
+| ---------- | -------------------------- | ------------------------- |
+| **POST**   | `/api/pedidos`             | Criar novo pedido         |
+| **GET**    | `/api/pedidos/{id}`        | Consultar pedido por ID   |
+| **POST**   | `/api/pedidos/{id}/add`    | Adicionar filme ao pedido |
+| **DELETE** | `/api/pedidos/{id}/remove` | Remover filme do pedido   |
 
-Abra um Pull Request
+---
 
-📝 Licença
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE.
+### 💳 **Pagamentos**
 
-Desenvolvido por Hevellyn Karinne Ribeiro Castro, João Pedro Dourado do Nascimento, Julia Rocha Celestino 🎓
+| Método   | Rota                                     | Descrição                   |
+| -------- | ---------------------------------------- | --------------------------- |
+| **POST** | `/api/pedidos/{id}/pagar/pix`            | Pagar com Pix               |
+| **POST** | `/api/pedidos/{id}/pagar/cartao/credito` | Pagar com cartão de crédito |
+| **POST** | `/api/pedidos/{id}/pagar/cartao/debito`  | Pagar com cartão de débito  |
+
+---
+
+
+
+
+
+## 📖 **Fluxo de Compra**
+
+* Cliente escolhe um filme.
+* O sistema cria um pedido e adiciona o item correspondente.
+* O total do pedido é calculado automaticamente.
+* O cliente escolhe a forma de pagamento.
+* O pagamento é processado e o status do pedido é atualizado.
+
+---
+
+## 👩‍💻 **Autores**
+
+* **Hevellyn Karinne Ribeiro Castro**
+* **João Pedro Dourado do Nascimento**
+* **Julia Rocha Celestino**
+
+---
+
+
