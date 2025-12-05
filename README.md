@@ -47,7 +47,6 @@ O sistema simula um **e-commerce de filmes digitais**, permitindo que usuários 
 - IDE (VS Code ou IntelliJ)
 
 ### Passos
-```bash
 git clone https://github.com/JoaoPedroDn/makeila.git
 cd makeila
 mvn spring-boot:run
